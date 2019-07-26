@@ -36,9 +36,9 @@ def mkdir(path_name):
         print("链接存放于", subpath)
 
 def savesrc(cnt,filepath):
-    os.remove(filepath) #删除文件
-    stm = open(filepath,'w') #创建文件
-    stm.write('*** Warning! Only for study! *** \n')
+    # os.remove(filepath) #删除文件
+    stm = open(filepath,'w',encoding='utf-8') #创建文件
+    stm.write(' *** Warning! Only for study! *** \n *** save as utf-8 ***\n')
     for i in cnt.find_all('a'):
         try:
             ref = i.attrs['href']
